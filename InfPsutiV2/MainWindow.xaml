@@ -1,0 +1,24 @@
+﻿<Window x:Class="InfPsutiV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfPsutiV2" xmlns:viewmodels="clr-namespace:InfPsutiV2.ViewModels" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Сегодня"/>
+                    <TextBox Text="{Binding Family}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DockPanel}, Path=ActualWidth}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Фамилия"/>
+                    <TextBox Text="{Binding Family}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DockPanel}, Path=ActualWidth}" />
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
